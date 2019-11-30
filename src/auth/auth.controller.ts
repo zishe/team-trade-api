@@ -1,9 +1,16 @@
-import { Controller, Post, Body, Logger, HttpStatus, Get } from '@nestjs/common';
+import {
+    Controller,
+    Post,
+    Body,
+    Logger,
+    HttpStatus,
+    Get,
+} from '@nestjs/common';
 import { ApiUseTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 import { AuthService } from './auth.service';
-import { UserDTO } from 'src/user/user.dto';
-import { RequestContext } from 'src/core/context/request-context';
+import { UserDTO } from '../user/user.dto';
+import { RequestContext } from '../core/context/request-context';
 
 @ApiUseTags('Auth')
 @Controller('auth')
@@ -26,8 +33,7 @@ export class AuthController {
     })
     @ApiResponse({
         status: HttpStatus.BAD_REQUEST,
-        description:
-            'Invalid input',
+        description: 'Invalid input',
     })
     @Post('login')
     login(@Body() data: UserDTO) {

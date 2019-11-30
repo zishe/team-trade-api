@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { JsonWebTokenError, sign, verify } from 'jsonwebtoken';
 
-import { UserDTO } from 'src/user/user.dto';
-import { UserService } from 'src/user/user.service';
+import { UserDTO } from '../user/user.dto';
+import { UserService } from '../user/user.service';
 
 @Injectable()
 export class AuthService {

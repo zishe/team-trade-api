@@ -5,7 +5,7 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 import * as cls from 'cls-hooked';
 import { ExtractJwt } from 'passport-jwt';
-import { UserEntity as User } from 'src/user/user.entity';
+import { User } from '../../user';
 
 export class RequestContext {
     readonly id: number;

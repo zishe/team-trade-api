@@ -27,7 +27,10 @@ async function bootstrap() {
     app.setGlobalPrefix(globalPrefix);
 
     await app.listen(port);
-    Logger.log(`Server started at http://localhost:${port}/${globalPrefix}`, 'Bootstrap');
+    Logger.log(
+        `Server started at http://localhost:${port}/${globalPrefix}`,
+        'Bootstrap',
+    );
 
     const router = app.getHttpServer()?._events?.request?._router;
     Logger.log(expressListRoutes({}, 'API:', router), 'Routes');

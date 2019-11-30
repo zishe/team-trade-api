@@ -1,10 +1,10 @@
-import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { UserEntity as User } from './user.entity';
 import { UserDTO } from './user.dto';
-import { CrudService } from 'src/core/crud';
+import { CrudService } from '../core/crud';
+import { User } from './user.entity';
 
 @Injectable()
 export class UserService extends CrudService<User> {
