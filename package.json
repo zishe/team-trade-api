@@ -20,9 +20,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^6.10.4",
-    "@nestjs/core": "^6.10.4",
-    "@nestjs/platform-express": "^6.10.4",
+    "@nestjs/common": "6.10.7",
+    "@nestjs/core": "6.10.7",
+    "@nestjs/platform-express": "^6.10.7",
     "@nestjs/swagger": "^3.1.0",
     "@nestjs/typeorm": "^6.2.0",
     "@nestjsx/crud": "^4.2.0",
@@ -41,12 +41,12 @@
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3",
     "swagger-ui-express": "^4.1.2",
-    "typeorm": "^0.2.20"
+    "typeorm": "0.2.21"
   },
   "devDependencies": {
-    "@nestjs/cli": "6.12.6",
+    "@nestjs/cli": "6.12.9",
     "@nestjs/schematics": "6.7.5",
-    "@nestjs/testing": "6.10.4",
+    "@nestjs/testing": "6.10.7",
     "@types/express": "4.17.2",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
@@ -60,7 +60,7 @@
     "ts-node": "8.5.4",
     "tsconfig-paths": "3.9.0",
     "tslint": "5.20.1",
-    "typescript": "3.7.2"
+    "typescript": "3.7.3"
   },
   "jest": {
     "moduleFileExtensions": [
