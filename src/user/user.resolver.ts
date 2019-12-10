@@ -39,19 +39,18 @@ export class UserResolver {
     }
 
     @Mutation()
-    login(
+    async login(
         @Args('info') info: any,
     ) {
         Logger.log(`login login`, 'Log');
 
         // const user: UserDTO = { username, password };
-        // return await this.authService.login({
-        //     email: info.profileObj.email,
-        //     name: info.profileObj.name,
-        //     gid: info.profileObj.googleId,
-        //     token: info.accessToken,
-        //     photo: info.profileObj.imageUrl,
-        // });
-        return { success: true, authData: { jwt: 'fds', userId: 11 } };
+        return await this.authService.login({
+            email: info.profileObj.email,
+            name: info.profileObj.name,
+            gid: info.profileObj.googleId,
+            token: info.accessToken,
+            photo: info.profileObj.imageUrl,
+        });
     }
 }

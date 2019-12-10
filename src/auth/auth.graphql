@@ -1,9 +1,3 @@
-type User {
-  id: ID!
-  username: String!
-  created: Date!
-}
-
 type AuthData {
   jwt: String!
   userId: String!
@@ -12,12 +6,6 @@ type AuthData {
 type Auth {
   success: Boolean!
   authData: AuthData!
-}
-
-type Query {
-  users(page: Int): [User!]
-  user(username: String!): User
-  whoami: User
 }
 
 input GoogleProfile {
