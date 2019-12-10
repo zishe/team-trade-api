@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { JsonWebTokenError, sign, verify } from 'jsonwebtoken';
 
 import { UserDTO } from '../user/user.dto';
@@ -24,6 +24,7 @@ export class AuthService {
     }
 
     async login(data: UserDTO) {
+        Logger.log(`login login`, 'Log');
         const { email } = data;
         let response = {
             success: false,
@@ -39,6 +40,7 @@ export class AuthService {
         const payload = { id: userId };
         const jwt: string = sign(payload, process.env.SECRET, {});
         response = { success: true, authData: { jwt, userId } };
+        Logger.log(`response is ${response}`);
 
         return response;
     }

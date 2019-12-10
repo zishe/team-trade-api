@@ -1,0 +1,7 @@
+scalar Date
+
+enum MutationType {
+    CREATED
+    UPDATED
+    DELETED
+}

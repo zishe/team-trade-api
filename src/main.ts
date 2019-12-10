@@ -14,6 +14,14 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     app.use(helmet());
 
+    // app.enableCors({
+    //     origin: [
+    //         'http://localhost:4200', // angular
+    //         'http://localhost:3000', // react
+    //         'http://localhost:8081', // react-native
+    //     ],
+    // });
+
     const options = new DocumentBuilder()
         .setTitle('TeamTrade API')
         .setVersion('0.0.1')
@@ -32,7 +40,9 @@ async function bootstrap() {
         'Bootstrap',
     );
 
-    const router = app.getHttpServer()?._events?.request?._router;
-    Logger.log(expressListRoutes({}, 'API:', router), 'Routes');
+    // Logger.log('Info', process.env.NODE_ENV);
+
+    // const router = app.getHttpServer()?._events?.request?._router;
+    // Logger.log(expressListRoutes({}, 'API:', router), 'Routes');
 }
 bootstrap();

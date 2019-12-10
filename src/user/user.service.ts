@@ -30,4 +30,9 @@ export class UserService extends CrudService<User> {
         const user = this.repository.create(data);
         return await this.repository.save(user);
     }
+
+    async createFromWebLogin(data: UserDTO) {
+        const user = this.repository.create(data);
+        return await this.repository.save(user);
+    }
 }

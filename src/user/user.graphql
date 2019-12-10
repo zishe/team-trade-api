@@ -1,0 +1,37 @@
+type User {
+  id: ID!
+  username: String!
+  created: Date!
+}
+
+type Auth {
+  userId: ID!
+  email: String!
+  token: String!
+}
+
+type Query {
+  users(page: Int): [User!]
+  user(username: String!): User
+  whoami: User
+}
+
+input GoogleProfile {
+  email: String!
+  familyName: String!
+  givenName: String!
+  name: String!
+  googleId: String!
+  imageUrl: String
+}
+
+input GoogleWebLogin {
+  accessToken: String!
+  googleId: String!
+  tokenId: String!
+  profileObj: GoogleProfile!
+}
+
+type Mutation {
+  login(info: GoogleWebLogin!): Auth
+}
