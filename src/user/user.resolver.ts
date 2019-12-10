@@ -1,17 +1,10 @@
-import {
-    Resolver,
-    Query,
-    Args,
-    Context,
-} from '@nestjs/graphql';
+import { Resolver, Query, Args, Context } from '@nestjs/graphql';
 
 import { UserService } from './user.service';
 
 @Resolver()
 export class UserResolver {
-    constructor(
-        private userService: UserService,
-    ) {}
+    constructor(private userService: UserService) {}
 
     @Query()
     async users(@Args('page') page: number) {
