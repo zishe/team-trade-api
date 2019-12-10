@@ -2,7 +2,6 @@
 // MIT License, see https://github.com/xmlking/ngx-starter-kit/blob/develop/LICENSE
 // Copyright (c) 2018 Sumanth Chinthagunta
 
-import { ApiModelPropertyOptional } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
 import { IsOptional, Max, Min } from 'class-validator';
 
@@ -18,7 +17,6 @@ export abstract class PaginationParams<T> {
     /**
      * Pagination limit
      */
-    @ApiModelPropertyOptional({ type: Number, minimum: 0, maximum: 50 })
     @IsOptional()
     @Min(0)
     @Max(50)
@@ -28,7 +26,6 @@ export abstract class PaginationParams<T> {
     /**
      * Pagination offset
      */
-    @ApiModelPropertyOptional({ type: Number, minimum: 0 })
     @IsOptional()
     @Min(0)
     @Transform((val: string) => parseInt(val, 10))
@@ -37,7 +34,6 @@ export abstract class PaginationParams<T> {
     /**
      * OrderBy
      */
-    @ApiModelPropertyOptional()
     @IsOptional()
     abstract readonly order?: { [P in keyof T]?: OrderType };
 }
