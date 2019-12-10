@@ -1,8 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { JsonWebTokenError, sign, verify } from 'jsonwebtoken';
+import { JsonWebTokenError, verify } from 'jsonwebtoken';
 
 import { UserDTO } from '../user/user.dto';
 import { UserService } from '../user/user.service';
+import { SuccessResponse } from './response/success.response';
+import { ErrorResponse } from './response/error.response';
 
 @Injectable()
 export class AuthService {
@@ -24,25 +26,14 @@ export class AuthService {
     }
 
     async login(data: UserDTO) {
-        Logger.log(`login login`, 'Log');
-        const { email } = data;
-        let response = {
-            success: false,
-            authData: { jwt: null, userId: null },
-        };
+        Logger.log(`login with email ${data.email}`, 'Auth');
 
-        let user = await this.userService.findByEmail(email);
-        if (!user) {
-            user = await this.userService.createFormOAuth(data);
+        try {
+            const user = await this.userService.findOrCreate(data);
+            return SuccessResponse(user);
+        } catch (error) {
+            return ErrorResponse(error);
         }
-
-        const userId = user.id;
-        const payload = { id: userId };
-        const jwt: string = sign(payload, process.env.SECRET, {});
-        response = { success: true, authData: { jwt, userId } };
-        Logger.log(`response is ${response}`);
-
-        return response;
     }
 
     // async createToken(user: { id: string }): Promise<{ token: string }> {

@@ -4,38 +4,8 @@ type User {
   created: Date!
 }
 
-type AuthData {
-  jwt: String!
-  userId: String!
-}
-
-type Auth {
-  success: Boolean!
-  authData: AuthData!
-}
-
 type Query {
   users(page: Int): [User!]
   user(username: String!): User
   whoami: User
-}
-
-input GoogleProfile {
-  email: String!
-  familyName: String!
-  givenName: String!
-  name: String!
-  googleId: String!
-  imageUrl: String
-}
-
-input GoogleWebLogin {
-  accessToken: String!
-  googleId: String!
-  tokenId: String!
-  profileObj: GoogleProfile!
-}
-
-type Mutation {
-  login(info: GoogleWebLogin!): Auth
 }
