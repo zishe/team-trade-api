@@ -1,0 +1,15 @@
+type Symbol {
+  symbol: String!
+  exchange: String!
+  name: String!
+  date: String!
+  type: String!
+  iexId: String!
+  region: String!
+  currency: String!
+  isEnabled: Boolean!
+}
+
+type Mutation {
+  search(fragment: String!): [Symbol!]!
+}
