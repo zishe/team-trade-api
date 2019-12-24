@@ -10,6 +10,6 @@ type Symbol {
   isEnabled: Boolean!
 }
 
-type Mutation {
+type Query {
   search(fragment: String!): [Symbol!]!
 }

@@ -1,4 +1,4 @@
-import { Resolver, Mutation, Args } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 import { MarketDataService } from './market-data.service';
 import { SymbolDTO } from './symbol.dto';
 
@@ -6,7 +6,7 @@ import { SymbolDTO } from './symbol.dto';
 export class MarketDataResolver {
     constructor(private marketDataService: MarketDataService) {}
 
-    @Mutation()
+    @Query()
     search(@Args('fragment') fragment: string): SymbolDTO[] {
         return this.marketDataService.search(fragment);
     }
