@@ -10,6 +10,20 @@ type Symbol {
   isEnabled: Boolean!
 }
 
+type Price {
+  date: String!
+  high: Float!
+  low: Float!
+  volume: Float!
+  open: Float!
+  close: Float!
+  changeOverTime: Float!
+  label: String!
+  change: Float!
+  changePercent: Float!
+}
+
 type Query {
   search(fragment: String!): [Symbol!]!
+  chart(symbol: String!): [Price!]!
 }
