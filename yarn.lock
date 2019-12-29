@@ -3984,7 +3984,7 @@ ienoopen@1.1.0:
   resolved "https://registry.yarnpkg.com/ienoopen/-/ienoopen-1.1.0.tgz#411e5d530c982287dbdc3bb31e7a9c9e32630974"
   integrity sha512-MFs36e/ca6ohEKtinTJ5VvAJ6oDRAYFdYXweUnGY9L9vcoqFOU4n2ZhmJ0C4z/cwGZ3YIQRSB3XZ1+ghZkY5NQ==
 
-iex-cloud@^2.1.1:
+iex-cloud@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/iex-cloud/-/iex-cloud-2.1.1.tgz#19d068f570fbe672e95e339df2bd500e6d2a59e9"
   integrity sha512-X8IiRF8ch0nC1JkRY7Eoxn6nRU9rF2v53nAMs3GUmLpMHqk+78twCpvtaTAZPrEi/nCahSXluLz/oiriBmpIuQ==
