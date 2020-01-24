@@ -55,7 +55,7 @@
     "apollo-server-express": "2.9.16",
     "graphql": "14.5.8",
     "graphql-tools": "4.0.6",
-    "jest": "24.9.0",
+    "jest": "25.1.0",
     "nodemon": "2.0.2",
     "prettier": "1.19.1",
     "supertest": "4.0.2",
