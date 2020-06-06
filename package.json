@@ -52,7 +52,7 @@
     "@types/jest": "24.9.1",
     "@types/node": "12.12.25",
     "@types/supertest": "2.0.8",
-    "apollo-server-express": "2.9.16",
+    "apollo-server-express": "2.14.2",
     "graphql": "14.6.0",
     "graphql-tools": "4.0.6",
     "jest": "25.1.0",
