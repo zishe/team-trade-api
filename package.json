@@ -31,7 +31,7 @@
     "cls-hooked": "4.2.2",
     "dotenv": "8.2.0",
     "express-list-routes": "0.1.4",
-    "helmet": "3.21.2",
+    "helmet": "3.23.3",
     "iex-cloud": "2.1.1",
     "jsonwebtoken": "8.5.1",
     "mysql": "2.18.1",
