@@ -1120,6 +1120,11 @@
   resolved "https://registry.yarnpkg.com/@types/validator/-/validator-10.11.3.tgz#945799bef24a953c5bc02011ca8ad79331a3ef25"
   integrity sha512-GKF2VnEkMmEeEGvoo03ocrP9ySMuX1ypKazIYMlsjfslfBMhOAtC5dmEWKdJioW4lJN7MZRS88kalTsVClyQ9w==
 
+"@types/validator@^13.1.3":
+  version "13.1.3"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.1.3.tgz#366b394aa3fbeed2392bf0a20ded606fa4a3d35e"
+  integrity sha512-DaOWN1zf7j+8nHhqXhIgNmS+ltAC53NXqGxYuBhWqWgqolRhddKzfZU814lkHQSTG0IUfQxU7Cg0gb8fFWo2mA==
+
 "@types/webpack-sources@*":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@types/webpack-sources/-/webpack-sources-0.1.5.tgz#be47c10f783d3d6efe1471ff7f042611bd464a92"
@@ -2398,7 +2403,16 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-class-validator@0.11.0, class-validator@>=0.9.1:
+class-validator@0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/class-validator/-/class-validator-0.13.1.tgz#381b2001ee6b9e05afd133671fbdf760da7dec67"
+  integrity sha512-zWIeYFhUitvAHBwNhDdCRK09hWx+P0HUwFE8US8/CxFpMVzkUK8RJl7yOIE+BVu2lxyPNgeOaFv78tLE47jBIg==
+  dependencies:
+    "@types/validator" "^13.1.3"
+    libphonenumber-js "^1.9.7"
+    validator "^13.5.2"
+
+class-validator@>=0.9.1:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/class-validator/-/class-validator-0.11.0.tgz#5fca8b8a957c738a6749391e03ee81fad375dc4a"
   integrity sha512-niAmmSPFku9xsnpYYrddy8NZRrCX3yyoZ/rgPKOilE5BG0Ma1eVCIxpR4X0LasL/6BzbYzsutG+mSbAXlh4zNw==
@@ -5304,6 +5318,11 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+libphonenumber-js@^1.9.7:
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.9.8.tgz#82f88ea473c2214667709c24220bade4b85e0752"
+  integrity sha512-gXzuhvlqdH20MlKAy1jXOVouCYByz43ZGCAeNnNuKQXUM+Wl36gbql0M27QQI3ahYCHJErd2W8ciqWweoQdbrQ==
 
 loader-runner@^2.4.0:
   version "2.4.0"
@@ -8263,6 +8282,11 @@ validator@12.0.0:
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/validator/-/validator-12.0.0.tgz#fb33221f5320abe2422cda2f517dc3838064e813"
   integrity sha512-r5zA1cQBEOgYlesRmSEwc9LkbfNLTtji+vWyaHzRZUxCTHdsX3bd+sdHfs5tGZ2W6ILGGsxWxCNwT/h3IY/3ng==
+
+validator@^13.5.2:
+  version "13.5.2"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.5.2.tgz#c97ae63ed4224999fb6f42c91eaca9567fe69a46"
+  integrity sha512-mD45p0rvHVBlY2Zuy3F3ESIe1h5X58GPfAtslBjY7EtTqGquZTj+VX/J4RnHWN8FKq0C9WRVt1oWAcytWRuYLQ==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
