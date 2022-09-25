@@ -24,7 +24,7 @@
     "@nestjs/platform-express": "6.11.5",
     "@nestjs/swagger": "4.2.1",
     "@nestjs/typeorm": "6.2.0",
-    "@nestjsx/crud": "4.4.1",
+    "@nestjsx/crud": "4.6.2",
     "bcrypt": "3.0.7",
     "class-transformer": "0.2.3",
     "class-validator": "0.11.0",
